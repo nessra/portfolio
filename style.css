@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800;900&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+a{
+    text-decoration: none; 
+}
+
+/* Navbar */
+
+nav{
+   background-color: #f0f1f3;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 20px;
+   padding-bottom: 25px;
+   
+}
+
+nav h1{
+  font-weight: 900; 
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+
+nav a{
+    color: black;
+  
+}
+
+nav ul{
+   display: flex;
+   gap: 30px;
+   padding: 0;
+   margin: 0;
+  
+}
+
+nav .icons{
+    font-size: 2rem;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px;
+    max-width: 1200px;
+   
+}
+
+.text-content{
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+
+}
+
+.image-content img{
+    width: 60vh;
+    height: 60vh;
+    border-radius: 15px;
+    
+}
+
+
+
+.button-primary{
+   display: flex;
+   background-color: black;
+   color: white;
+   border-radius: 8px;
+   width: fit-content;
+   height: fit-content;
+   padding: 8px 16px;
+}
+
+/* Prestations */
+
+#services{
+    background-color: black;
+    color: white;
+}
+
+#services h2{
+   padding-top: 30px;
+   padding-left: 40px;
+   font-style: italic;
+}
+
+.card-container{
+   display: flex;
+   gap: 40px;
+   padding: 40px;
+   
+   
+}
+
+.card{
+   background: #f0f1f3 ;
+   color: black;
+   border-radius: 8%;
+}
+
+.card .card-image{
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+
+.card-info{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 40px;
+   gap: 8px;
+}
+
+
