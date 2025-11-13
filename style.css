@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@521&display=swap');
 
 
 body{
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
+  color: white;
 }
 
 a{
@@ -14,7 +16,7 @@ a{
 /* Navbar */
 
 nav{
-   background-color: #f0f1f3;
+   background-color: #1a1a1a;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -26,12 +28,18 @@ nav{
 nav h1{
   font-weight: 900; 
   font-size: 1.5rem;
-  margin-left: 30px;
+  padding-left: 30px;
 }
 
 nav a{
-    color: black;
+    color: white;
   
+}
+
+nav ul a:hover{
+   transform: scale(1.2);
+   font-weight: bold;
+   transition: 0.3s ease-in-out;
 }
 
 nav ul{
@@ -50,37 +58,60 @@ nav .icons{
     gap: 20px;
 }
 
+nav .icons i{
+   transition: color 0.3s ease-in-out ;
+}
+
+nav .icons a:hover .fa-square-facebook{
+   color: #1877F2;;
+}
+
+nav .icons a:hover .fa-square-instagram{
+   color: #E1306C;
+}
+
+nav .icons a:hover .fa-linkedin{
+   color: #1DA1F2;
+}
+
 
 /* Header */
 
 header{
     display: flex;
+    background-color: #003366;
     align-items: center;
-    justify-content: space-between;
-    margin: 60px;
-    max-width: 1200px;
-   
+    justify-content: center;
+    padding: 60px 80px;
+    width: 89vw;
+    height: 70vh;  
 }
 
 .text-content{
    display: flex;
    flex-direction: column;
    gap: 35px;
+   width: 60%;
+}
 
+.image-content{
+   width: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .image-content img{
     width: 60vh;
     height: 60vh;
-    border-radius: 15px;
-    
+    border-radius: 15px;    
 }
 
 
 
 .button-primary{
    display: flex;
-   background-color: black;
+   background-color: #C6A470;
    color: white;
    border-radius: 8px;
    width: fit-content;
@@ -88,48 +119,216 @@ header{
    padding: 8px 16px;
 }
 
+.button-primary:hover{
+   background-color:black;
+   transition: 0.3s ease-in-out;
+   cursor: pointer;
+}
+
 /* Prestations */
 
 #services{
-    background-color: black;
-    color: white;
+    background-color: white;
     font-family: "Source Serif 4",sans-serif;
-    padding-top: 30px;
+    padding-top: 20vh;
+    min-height: 90vh;
 }
 
 #services h2{
-   padding-left: 80px;
-   font-style: italic;
+   display: flex;
+   color: black;
+   align-items: center;
+   justify-content: center;
+   font-family: "Oswald", sans-serif;
 }
 
 .card-container{
    display: flex;
    gap: 40px;
-   padding: 40px;
-   margin-top: 60px;
-   
-   
+   padding: 60px;
+   padding-top: 60px;
 }
 
 .card{
    background: #f0f1f3 ;
    color: black;
-   border-radius: 8%;
+   width: 300px;  
+   height: 65vh;
+   border-radius: 2%;
+   overflow: hidden;
+   position: relative;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+   transition:  0.6s ease-in-out;
 }
 
-.card .card-image{
+.card:hover{
+    transform: scale(1.1); 
+}
+
+.card-image{
    width: 100%;
    height: 200px;
-   object-fit: cover;
+   object-fit: cover; 
+}
+
+.card-info h3, .card-info p{
+   margin: 0;
+   text-align: center;
 }
 
 .card-info{
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
-   padding: 40px;
-   gap: 8px;
+   justify-content: space-evenly;
+   height: 30vh;
+   padding: 13px; 
 }
 
+/* Avis */
+
+#opinion{
+   text-align: center;
+   padding-bottom: 22vh;
+   padding-top: 15vh;
+   color: black;
+}
+
+#opinion h2{
+   font-family: "Oswald", sans-serif;
+   padding-bottom: 40px;
+}
+
+.opinion-container{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.opinion-card{
+   background-color: #f0f1f3;
+   border-radius: 8px;
+   padding: 20px;
+   width: 40vh;
+   height: 33vh;
+   text-align: left;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.stars{
+   color: #C6A470;
+}
+
+.user-info {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.user-info img{
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;  
+}
+
+/* Formulaire */
+
+#section-form{
+   color: black;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 50px;
+}
+
+form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+}
+
+#section-form h2{
+    display: flex;
+    justify-content: center;
+}
+
+ #section-form input{
+
+  height: 8vh;
+  width: 30vw;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  box-sizing: border-box;  
+
+   
+}
+
+#section-form #message{
+     height: 40vh;
+     width: 62vw;
+     
+}
+
+#section-form #number{
+   width: 62vw;
+}
+
+
+
+.form-name{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+
+
+
+
+/* Footer */
+
+footer{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   background-color: #1a1a1a;
+   color: #f0f1f3;
+   height: 35vh;
+   padding-right: 20px ;
+}
+
+footer h3, footer p{
+   margin: 0;
+}
+
+.footer-form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 30vh;
+}
+
+
+
+.button-secondary{
+   background-color: #C6A470;
+   color: white;
+   border-radius: 8px;
+   width: fit-content;
+   height: fit-content;
+   padding: 8px 16px;
+}
+
+.footer-form input{
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
